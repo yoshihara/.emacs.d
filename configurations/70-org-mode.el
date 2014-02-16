@@ -1,3 +1,4 @@
+(require 'org)
 (setq org-agenda-files (list "~/Dropbox/todo/todo.org" "~/Dropbox/todo/todo.org_archive"))
 (setq org-default-notes-file "~/Dropbox/todo/todo.org")
 (global-set-key (kbd "C-c a") `org-agenda)
