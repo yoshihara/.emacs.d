@@ -13,6 +13,7 @@
     magit
     textile-mode
     helm
+    anzu
     ;; helm-recentf
     ;; helm-show-kill-ring
     ;; helm-ag
