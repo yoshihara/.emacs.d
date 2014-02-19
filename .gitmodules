@@ -1,3 +1,6 @@
 [submodule "submodules/evemacs"]
 	path = submodules/evemacs
 	url = https://github.com/yoshihara/evemacs.git
+[submodule "imports/rbenv"]
+	path = imports/rbenv
+	url = git://github.com/senny/rbenv.el.git
