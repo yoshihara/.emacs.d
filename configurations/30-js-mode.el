@@ -1,7 +1,3 @@
-;;; js2-mode
-;;; JavaScript編集用のモード
-;;; 2012-04-25
-
 (el-get 'sync '(mooz-js2-mode))
 
 (add-hook 'js2-mode-hook
