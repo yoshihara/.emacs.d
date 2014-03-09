@@ -14,7 +14,7 @@
 (setq appt-display-duration 30)
 (setq appt-display-mode-line t)
 (setq appt-message-warning-time 6)
-(setq appt-display-interval 2)
+(setq appt-display-interval 3)
 (display-time)
 (appt-activate 1)
 (org-agenda-to-appt)
