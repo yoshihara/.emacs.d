@@ -8,9 +8,25 @@
 
 (setq default-input-method "MacOSX")
 (mac-set-input-method-parameter "com.google.inputmethod.Japanese.base" `title "あ")
-(set-fontset-font "fontset-default"
-                  'japanese-jisx0208
-                  '("Hiragino Kaku Gothic ProN" . "iso10646-1"))
+
+;; (set-face-attribute 'default nil :family "Ricty" :height 150)
+
+;; (set-fontset-font "fontset-default"
+;;                   'japanese-jisx0208
+;;                   '("Ricty" . "iso10646-1"))
+
+(let* ((size 18)
+       (asciifont "Ricty")
+       (jpfont "Ricty")
+       (h (* size 10))
+       (fontspec (font-spec :family asciifont))
+       (jp-fontspec (font-spec :family jpfont)))
+  (set-face-attribute 'default nil :family asciifont :height h)
+  (set-fontset-font nil 'japanese-jisx0213.2004-1 jp-fontspec)
+  (set-fontset-font nil 'japanese-jisx0213-2 jp-fontspec)
+  (set-fontset-font nil 'katakana-jisx0201 jp-fontspec)
+  (set-fontset-font nil '(#x0080 . #x024F) fontspec)
+  (set-fontset-font nil '(#x0370 . #x03FF) fontspec))
 (set-cursor-color 'gray)
 
 ;; パスの設定
