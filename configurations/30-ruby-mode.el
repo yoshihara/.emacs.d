@@ -1,4 +1,4 @@
-(el-get 'sync '(ruby-mode-trunk))
+(el-get 'sync '(ruby-mode))
 (require 'ruby-mode)
 
 (add-hook 'ruby-mode-hook
