@@ -13,7 +13,7 @@
                     :underline t)
 (set-face-attribute 'whitespace-tab nil
                     :foreground "LightSkyBlue"
-                    :underline t)
+                    :underline nil)
 (set-face-attribute 'whitespace-space nil
                     :foreground "Yellow"
                     :weight 'bold)
