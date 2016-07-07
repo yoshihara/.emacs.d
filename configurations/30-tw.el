@@ -6,6 +6,4 @@
 ;; アイコン表示
 (setq twittering-icon-mode nil)
 
-(el-get 'sync '(haml-mode))
-
 (setq coffee-tab-width 2)
