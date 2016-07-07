@@ -7,13 +7,6 @@
 (setq ring-bell-function 'ignore)
 
 (setq default-input-method "MacOSX")
-(mac-set-input-method-parameter "com.google.inputmethod.Japanese.base" `title "あ")
-
-;; (set-face-attribute 'default nil :family "Ricty" :height 150)
-
-;; (set-fontset-font "fontset-default"
-;;                   'japanese-jisx0208
-;;                   '("Ricty" . "iso10646-1"))
 
 (let* ((size 18)
        (asciifont "Ricty")
@@ -38,11 +31,6 @@
  (add-to-list 'load-path default-directory)
  (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
      (normal-top-level-add-subdirs-to-load-path)))
-
-;; magitでコミットメッセージ入力時に新しいemacsを立ち上げないようにする
-(set-variable 'magit-emacsclient-executable "/usr/local/Cellar/emacs/24.3/bin/emacsclient")
-;; (set-variable 'magit-emacsclient-executable "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient")
-
 
 (setq max-lisp-eval-depth 100000000000)
 (setq popwin:close-popup-window-timer-interval 0.1)
