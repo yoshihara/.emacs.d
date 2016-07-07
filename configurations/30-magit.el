@@ -13,3 +13,6 @@
   ;; 2015-08-17
   (setq magit-push-always-verify nil))
 (add-hook 'magit-mode-hook 'magit-setup-push)
+
+;; magitでコミットメッセージ入力時に新しいemacsを立ち上げないようにする
+(set-variable 'with-editor-emacsclient-executable "/usr/local/Cellar/emacs/24.5/bin/emacsclient")
