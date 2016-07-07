@@ -10,15 +10,6 @@
 ;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
 
-;;; 補完
-;; 補完時に大文字小文字を区別しない
-(setq completion-ignore-case t)
-(setq read-file-name-completion-ignore-case t)
-(if (fboundp 'partial-completion-mode)
-    (partial-completion-mode t))
-;; 補完可能なものを随時表示
-(icomplete-mode 1)
-
 ;;; 履歴
 ;; 履歴数を大きくする
 (setq history-length 10000)
