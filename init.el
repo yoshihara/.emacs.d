@@ -17,6 +17,7 @@
 (package-initialize)
 
 ;; init-loader
+(package-install 'init-loader)
 (require 'init-loader)
 (setq init-loader-show-log-after-init t)
 (init-loader-load "~/.emacs.d/configurations")
