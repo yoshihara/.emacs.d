@@ -1,8 +1,5 @@
 (require 'cl)
 
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
 (defvar installing-package-list
   '(
     async
@@ -15,7 +12,6 @@
     sass-mode
     slim-mode
     coffee-mode
-    js-mode
     yaml-mode
     rspec-mode
     textile-mode
