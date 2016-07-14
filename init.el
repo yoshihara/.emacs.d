@@ -11,12 +11,21 @@
                  load-path))
 
 ;; package.elの設定
-(require 'package)
-(setq package-user-dir "~/.emacs.d/elisp/elpa/")
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
+(require 'package) ;; You might already have this line
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize) ;; You might already have this line
+
+;; (require 'package)
+;; (setq package-user-dir "~/.emacs.d/elisp/elpa/")
+;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/http://melpa.milkbox.net/packages/") t)
+;; (package-initialize)
 
 ;; init-loader
+(package-install 'init-loader)
 (require 'init-loader)
 (setq init-loader-show-log-after-init t)
 (init-loader-load "~/.emacs.d/configurations")
