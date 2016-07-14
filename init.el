@@ -21,12 +21,6 @@
 
 
 ;; init-loader
-(cond ((equal nil (package-installed-p 'init-loader))
-    (package-list-packages)
-    (package-install 'init-loader)
-  )
-)
-
 (require 'init-loader)
 (setq init-loader-show-log-after-init t)
 (init-loader-load "~/.emacs.d/configurations")
