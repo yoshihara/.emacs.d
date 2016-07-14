@@ -5,23 +5,27 @@
 
 (defvar installing-package-list
   '(
+    async
+    dash
+    git-commit
+    haml-mode
+    json-mode
     markdown-mode
     scss-mode
+    sass-mode
+    slim-mode
     coffee-mode
+    js-mode
     yaml-mode
-    open-junk-file
-    magit
+    rspec-mode
     textile-mode
+    open-junk-file
+    popup
+    magit
     helm
     anzu
-    ;; helm-recentf
-    ;; helm-show-kill-ring
-    ;; helm-ag
-    ;; helm-ls-git
-    ;; helm-git
-    ;; helm-imenu
     auto-complete
-
+    with-editor
     ))
 
 (let ((not-installed (loop for x in installing-package-list
