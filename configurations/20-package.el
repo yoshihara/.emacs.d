@@ -15,6 +15,7 @@
     yaml-mode
     rspec-mode
     textile-mode
+    js2-mode
     open-junk-file
     popup
     magit
