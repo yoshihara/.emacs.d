@@ -1,4 +1,4 @@
-(el-get 'sync '(ruby-mode))
+;; el-getから元々入れていたが、「invalid syntax "#"」というエラーが出るので一旦ビルドインで試す
 (require 'ruby-mode)
 
 (defun ruby-insert-end ()
