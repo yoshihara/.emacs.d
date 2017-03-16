@@ -5,7 +5,6 @@
     async
     dash
     git-commit
-    haml-mode
     json-mode
     markdown-mode
     scss-mode
