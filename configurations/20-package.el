@@ -8,7 +8,6 @@
     json-mode
     markdown-mode
     scss-mode
-    sass-mode
     slim-mode
     coffee-mode
     yaml-mode
