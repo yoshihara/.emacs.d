@@ -2,7 +2,7 @@
 
 (setq auto-mode-alist
       (append '(
-                ("\\.\\(html\\|xhtml\\|shtml\\|tpl\\)\\'" . web-mode)
+                ("\\.\\(html\\|xhtml\\|shtml\\|tpl\\|vue\\)\\'" . web-mode)
                 ("\\.php\\'" . php-mode)
                 )
               auto-mode-alist))
