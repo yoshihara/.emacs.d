@@ -1,8 +1,7 @@
-(set-fontset-font "fontset-default"
-                  'japanese-jisx0208
-                  '("VL ゴシック" . "iso10646-1")) ;; VL Gothicも可
-(require 'ibus-setting)
-(add-hook 'after-init-hook 'ibus-mode-on)
-(ibus-define-common-key (kbd "C-SPC") nil)
-(ibus-define-common-key (kbd "C-/") nil)
-(define-key global-map (kbd "C-o") 'ibus-toggle)
+(set-fontset-font t 'japanese-jisx0208 (font-spec :family "IPAExGothic"))
+(require 'mozc)
+(setq default-input-method "japanese-mozc")
+
+(global-set-key (kbd "C-o") 'toggle-input-method)
+;; magitでコミットメッセージ入力時に新しいemacsを立ち上げないようにする
+(set-variable 'with-editor-emacsclient-executable "/usr/bin/emacsclient")
