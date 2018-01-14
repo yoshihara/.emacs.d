@@ -42,3 +42,6 @@
 
 (defun close-popwin-timer-p (timer)
   (string= "popwin:close-popup-window-timer" (symbol-name (aref timer 5))))
+
+;; magitでコミットメッセージ入力時に新しいemacsを立ち上げないようにする
+(set-variable 'with-editor-emacsclient-executable "/usr/local/Cellar/emacs/24.5/bin/emacsclient")
