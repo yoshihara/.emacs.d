@@ -16,8 +16,15 @@
 (init-loader-load "~/.emacs.d/configurations")
 
 (setq load-path (append
-                 '("~/.emacs.d/config")
+                 '("~/.emacs.d/setup") ;; emacsセットアップ用ファイル入れ（この後設定で読み込むファイルが依存するものはこっち）
                  load-path))
+
+(require 'functions)
+
+(setq load-path (append
+                 '("~/.emacs.d/config") ;; emacs設定用ファイル入れ
+                 load-path))
+
 (require 'commands)
 (require 'modes)
 
