@@ -12,7 +12,6 @@
     coffee-mode
     yaml-mode
     rspec-mode
-    textile-mode
     open-junk-file
     popup
     magit
