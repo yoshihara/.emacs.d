@@ -93,6 +93,12 @@
 (require 'keybinds)
 (require 'commands)
 (require 'builtin-packages)
+
+;; パッケージインストール＆それらを使った定義など
+
+;; パッケージ情報を更新（インストールは別でやる）
+(package-refresh-contents)
+
 (require 'modes)
 (require 'other-packages)
 
@@ -124,11 +130,3 @@
  '(web-mode-html-attr-value-face ((t (:foreground "#82AE46"))))
  '(web-mode-html-tag-face ((t (:foreground "#E6B422" :weight bold))))
  '(web-mode-server-comment-face ((t (:foreground "#D9333F")))))
-
-;; package-selected-packagesにあるパッケージが入ってなかったらパッケージ情報を更新（インストールは別でやる）
-;; package-selected-packagesはpackages.elでパッケージを追加・削除したときに自動更新されるリスト
-(let ((not-installed (loop for x in package-selected-packages
-                            when (not (package-installed-p x))
-                            collect x)))
-  (when not-installed
-    (package-refresh-contents)))
