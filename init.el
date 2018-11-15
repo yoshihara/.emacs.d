@@ -9,7 +9,6 @@
   (when (< emacs-major-version 24)
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
-(package-refresh-contents)
 
 ;; init-loader
 (require 'init-loader)
@@ -35,7 +34,7 @@
  '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (web-mode mozc helm magit popup open-junk-file js2-mode textile-mode rspec-mode yaml-mode coffee-mode slim-mode sass-mode scss-mode markdown-mode json-mode haml-mode git-commit dash async init-loader))))
+    (web-mode slim-mode scss-mode rspec-mode open-junk-file markdown-mode magit json-mode init-loader helm coffee-mode auto-complete anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -50,3 +49,11 @@
  '(web-mode-html-attr-value-face ((t (:foreground "#82AE46"))))
  '(web-mode-html-tag-face ((t (:foreground "#E6B422" :weight bold))))
  '(web-mode-server-comment-face ((t (:foreground "#D9333F")))))
+
+;; package-selected-packagesにあるパッケージが入ってなかったらパッケージ情報を更新（インストールは別でやる）
+;; package-selected-packagesはpackages.elでパッケージを追加・削除したときに自動更新されるリスト
+(let ((not-installed (loop for x in package-selected-packages
+                            when (not (package-installed-p x))
+                            collect x)))
+  (when not-installed
+    (package-refresh-contents)))
