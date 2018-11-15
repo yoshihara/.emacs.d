@@ -5,7 +5,6 @@
     async
     dash
     git-commit
-    rspec-mode
     open-junk-file
     popup
     magit

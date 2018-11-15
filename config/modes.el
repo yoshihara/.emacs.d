@@ -50,4 +50,7 @@
 ;; yaml-mode
 (ensure-installed-package 'yaml-mode)
 
+;; rspec-mode
+(ensure-installed-package 'rspec-mode)
+
 (provide 'modes)
