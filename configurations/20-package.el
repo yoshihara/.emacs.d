@@ -2,7 +2,6 @@
 
 (defvar installing-package-list
   '(
-    dash
     git-commit
     open-junk-file
     popup

@@ -3,4 +3,7 @@
 ;; async
 (ensure-installed-package 'async)
 
+;; dash
+(ensure-installed-package 'dash)
+
 (provide 'misc-packages)
