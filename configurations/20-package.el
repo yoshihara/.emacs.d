@@ -2,7 +2,6 @@
 
 (defvar installing-package-list
   '(
-    anzu
     auto-complete
     ))
 

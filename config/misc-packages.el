@@ -73,4 +73,10 @@
     (kill-new (buffer-substring (point) (field-end))))
 )
 
+;; anzu
+(ensure-installed-package 'anzu)
+
+(global-anzu-mode 1)
+(define-key global-map (kbd "M-%")   'anzu-query-replace)
+
 (provide 'misc-packages)
