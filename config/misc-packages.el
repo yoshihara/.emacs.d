@@ -12,4 +12,7 @@
 ;; popup
 (ensure-installed-package 'popup)
 
+;; with-editor
+(ensure-installed-package 'with-editor)
+
 (provide 'misc-packages)

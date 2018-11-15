@@ -7,7 +7,6 @@
     helm
     anzu
     auto-complete
-    with-editor
     ))
 
 (let ((not-installed (loop for x in installing-package-list
