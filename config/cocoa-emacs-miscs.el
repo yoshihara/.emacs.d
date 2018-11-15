@@ -6,8 +6,6 @@
 ;; エラー音をならなくする
 (setq ring-bell-function 'ignore)
 
-(setq default-input-method "MacOSX")
-
 (let* ((size 18)
        (asciifont "Ricty")
        (jpfont "Ricty")
