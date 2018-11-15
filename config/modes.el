@@ -9,6 +9,19 @@
 ;; json-mode
 (ensure-installed-package 'json-mode)
 
+;; slim-mode
+(ensure-installed-package 'slim-mode)
+
+;; yaml-mode
+(ensure-installed-package 'yaml-mode)
+
+;; rspec-mode
+(ensure-installed-package 'rspec-mode)
+
+;; haml-mode
+(el-get 'sync '(sass-mode)) ;; haml-modeが依存している
+(el-get 'sync '(haml-mode))
+
 ;; markdown-mode
 (ensure-installed-package 'markdown-mode)
 (add-hook 'markdown-mode-hook
@@ -29,9 +42,6 @@
   '(lambda() (scss-custom)))
 (setq scss-compile-at-save nil)
 
-;; slim-mode
-(ensure-installed-package 'slim-mode)
-
 ;; coffee-mode
 (ensure-installed-package 'coffee-mode)
 (require 'coffee-mode)
@@ -46,12 +56,6 @@
 
 (add-hook 'coffee-mode-hook
   '(lambda() (coffee-custom)))
-
-;; yaml-mode
-(ensure-installed-package 'yaml-mode)
-
-;; rspec-mode
-(ensure-installed-package 'rspec-mode)
 
 ;; web-mode
 (ensure-installed-package 'web-mode)
@@ -165,9 +169,5 @@
             (define-key ruby-mode-map (kbd "C-C C-e") 'ruby-insert-end)))
 
 (defun ruby-mode-set-encoding ())
-
-;; haml-mode
-(el-get 'sync '(sass-mode)) ;; haml-modeが依存している
-(el-get 'sync '(haml-mode))
 
 (provide 'modes)
