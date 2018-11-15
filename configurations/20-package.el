@@ -2,7 +2,6 @@
 
 (defvar installing-package-list
   '(
-    git-commit
     magit
     helm
     anzu

@@ -15,4 +15,7 @@
 ;; with-editor
 (ensure-installed-package 'with-editor)
 
+;; git-commit
+(ensure-installed-package 'git-commit)
+
 (provide 'misc-packages)
