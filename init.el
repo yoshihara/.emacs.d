@@ -45,6 +45,7 @@
 
 (require 'face)
 (require 'commands)
+(require 'builtin-packages)
 (require 'modes)
 (require 'other-packages)
 
