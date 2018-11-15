@@ -29,4 +29,7 @@
   '(lambda() (scss-custom)))
 (setq scss-compile-at-save nil)
 
+;; slim-mode
+(ensure-installed-package 'slim-mode)
+
 (provide 'modes)

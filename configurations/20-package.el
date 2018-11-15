@@ -5,7 +5,6 @@
     async
     dash
     git-commit
-    slim-mode
     coffee-mode
     yaml-mode
     rspec-mode
