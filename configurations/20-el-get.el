@@ -24,5 +24,3 @@
           (lambda ()
             (define-key grep-mode-map
               (kbd "C-c C-c") 'grep-edit-finish-edit)))
-
-(el-get 'sync '(fuzzy))

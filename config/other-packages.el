@@ -12,6 +12,10 @@
 ;; popup
 (ensure-installed-package 'popup)
 
+;; fuzzy（あいまい検索）
+
+(el-get 'sync 'fuzzy)
+
 ;; with-editor
 (ensure-installed-package 'with-editor)
 
