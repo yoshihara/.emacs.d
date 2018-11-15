@@ -47,4 +47,7 @@
 (add-hook 'coffee-mode-hook
   '(lambda() (coffee-custom)))
 
+;; yaml-mode
+(ensure-installed-package 'yaml-mode)
+
 (provide 'modes)

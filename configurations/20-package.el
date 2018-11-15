@@ -5,7 +5,6 @@
     async
     dash
     git-commit
-    yaml-mode
     rspec-mode
     open-junk-file
     popup
