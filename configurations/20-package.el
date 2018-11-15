@@ -2,7 +2,6 @@
 
 (defvar installing-package-list
   '(
-    magit
     helm
     anzu
     auto-complete
