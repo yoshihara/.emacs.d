@@ -5,7 +5,6 @@
     async
     dash
     git-commit
-    markdown-mode
     scss-mode
     slim-mode
     coffee-mode
