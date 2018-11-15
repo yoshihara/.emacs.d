@@ -1,11 +1,3 @@
-(setq load-path (append
-                 '("~/.emacs.d")
-                 load-path))
-
-(setq load-path (append
-                 '("~/.emacs.d/imports")
-                 load-path))
-
 ;; package.elの設定
 ;; https://github.com/melpa/melpa/blob/b9ff4284d6e311960a79a3d20fb0542486c7f67b/README.md
 (require 'package)
