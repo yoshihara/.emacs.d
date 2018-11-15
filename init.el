@@ -79,11 +79,6 @@
 
 (setq el-get-recipe-path (reverse el-get-recipe-path))
 
-;; init-loader
-(require 'init-loader)
-(setq init-loader-show-log-after-init t)
-(init-loader-load "~/.emacs.d/configurations")
-
 (setq load-path (append
                  '("~/.emacs.d/setup") ;; emacsセットアップ用ファイル入れ（この後設定で読み込むファイルが依存するものはこっち）
                  load-path))
@@ -114,7 +109,7 @@
  '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (git-commit with-editor popup dash async web-mode slim-mode scss-mode rspec-mode open-junk-file markdown-mode magit json-mode init-loader helm coffee-mode auto-complete anzu))))
+    (git-commit with-editor popup dash async web-mode slim-mode scss-mode rspec-mode open-junk-file markdown-mode magit json-mode helm coffee-mode auto-complete anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
