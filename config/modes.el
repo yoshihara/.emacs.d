@@ -16,4 +16,17 @@
              (local-set-key (kbd "C-M-n") 'next-multiframe-window)
              (local-set-key (kbd "C-M-p") 'previous-multiframe-window)))
 
+;; scss-mode
+(ensure-installed-package 'scss-mode)
+(require 'scss-mode)
+
+(defun scss-custom ()
+  (setq indent-tabs-mode nil)
+  (setq css-indent-offset 2)
+  )
+
+(add-hook 'scss-mode-hook
+  '(lambda() (scss-custom)))
+(setq scss-compile-at-save nil)
+
 (provide 'modes)
