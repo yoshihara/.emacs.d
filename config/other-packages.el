@@ -101,4 +101,4 @@
     (setq ad-return-value
           (remove-if contain-japanese ad-return-value))))
 
-(provide 'misc-packages)
+(provide 'other-packages)
