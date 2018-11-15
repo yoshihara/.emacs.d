@@ -19,24 +19,6 @@
 ;; C-x K -> キーにバインドされている関数定義へ移動
 ;; C-x V -> 変数定義へ移動
 (find-function-setup-keys)
-;;; grep
-;; 再帰的にgrep
-(require 'grep)
-(setq grep-command-before-query "grep -nH -r -e ")
-(defun grep-default-command ()
-  (if current-prefix-arg
-      (let ((grep-command-before-target
-             (concat grep-command-before-query
-                     (shell-quote-argument (grep-tag-default)))))
-        (cons (if buffer-file-name
-                  (concat grep-command-before-target
-                          " *."
-                          (file-name-extension buffer-file-name))
-                (concat grep-command-before-target " ."))
-              (+ (length grep-command-before-target) 1)))
-    (car grep-command)))
-(setq grep-command (cons (concat grep-command-before-query " .")
-                         (+ (length grep-command-before-query) 1)))
 
 ;;; 行
 ;; 行の先頭でC-kを一回押すだけで行全体を消去する
