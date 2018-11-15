@@ -16,6 +16,9 @@
 (setq init-loader-show-log-after-init t)
 (init-loader-load "~/.emacs.d/configurations")
 
+(setq load-path (append
+                 '("~/.emacs.d/config")
+                 load-path))
 (require 'commands)
 
 (custom-set-variables
