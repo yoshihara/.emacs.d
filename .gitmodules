@@ -1,6 +1,3 @@
-[submodule "imports/scratch-log"]
-	path = imports/scratch-log
-	url = git://github.com/mori-dev/scratch-log.git
 [submodule "imports/simplenote"]
 	path = imports/simplenote
 	url = https://github.com/cefstat/simplenote.el.git
