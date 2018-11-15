@@ -3,7 +3,6 @@
 (defvar installing-package-list
   '(
     git-commit
-    open-junk-file
     popup
     magit
     helm

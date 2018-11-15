@@ -6,4 +6,7 @@
 ;; dash
 (ensure-installed-package 'dash)
 
+;; open-junk-file
+(ensure-installed-package 'open-junk-file)
+
 (provide 'misc-packages)
