@@ -22,13 +22,6 @@
 ;; gzファイルも編集できるようにする
 (auto-compression-mode t)
 
-;;; ディレクトリ
-;; diredを便利にする
-(require 'dired-x)
-;; diredから"r"でファイル名をインライン編集する
-(require 'wdired)
-(define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
-
 ;;; shebangがあるファイルを保存すると実行権をつける。
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
