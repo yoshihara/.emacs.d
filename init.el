@@ -42,7 +42,7 @@
  '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (web-mode slim-mode scss-mode rspec-mode open-junk-file markdown-mode magit json-mode init-loader helm coffee-mode auto-complete anzu))))
+    (git-commit with-editor popup dash async web-mode slim-mode scss-mode rspec-mode open-junk-file markdown-mode magit json-mode init-loader helm coffee-mode auto-complete anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
