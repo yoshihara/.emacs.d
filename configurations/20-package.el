@@ -5,7 +5,6 @@
     async
     dash
     git-commit
-    coffee-mode
     yaml-mode
     rspec-mode
     open-junk-file
