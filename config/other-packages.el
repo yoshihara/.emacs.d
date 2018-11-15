@@ -83,6 +83,15 @@
 (global-anzu-mode 1)
 (define-key global-map (kbd "M-%")   'anzu-query-replace)
 
+;; grep-edit
+;; *grep*で編集できるようにする
+(el-get 'sync 'grep-edit)
+(require 'grep-edit)
+(add-hook 'grep-setup-hook
+          (lambda ()
+            (define-key grep-mode-map
+              (kbd "C-c C-c") 'grep-edit-finish-edit)))
+
 ;; auto-complete
 (ensure-installed-package 'auto-complete)
 

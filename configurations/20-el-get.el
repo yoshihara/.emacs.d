@@ -15,12 +15,3 @@
              "~/.emacs.d/elisp/el-get-local-recipes")
 
 (setq el-get-recipe-path (reverse el-get-recipe-path))
-
-;;; grep-edit
-;; *grep*で編集できるようにする
-(el-get 'sync '(grep-edit))
-(require 'grep-edit)
-(add-hook 'grep-setup-hook
-          (lambda ()
-            (define-key grep-mode-map
-              (kbd "C-c C-c") 'grep-edit-finish-edit)))
