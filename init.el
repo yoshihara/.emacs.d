@@ -21,6 +21,11 @@
                  load-path))
 (require 'commands)
 
+(if (eq system-type 'darwin)
+  (require 'cocoa-emacs-miscs) ; macosのとき
+  (require 'linux-miscs) ; それ以外（linux）
+)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -29,3 +29,5 @@
 
 ;; magitでコミットメッセージ入力時に新しいemacsを立ち上げないようにする
 (set-variable 'with-editor-emacsclient-executable "/usr/local/bin/emacsclient")
+
+(provide 'cocoa-emacs-miscs)

@@ -5,3 +5,5 @@
 (global-set-key (kbd "C-o") 'toggle-input-method)
 ;; magitでコミットメッセージ入力時に新しいemacsを立ち上げないようにする
 (set-variable 'with-editor-emacsclient-executable "/usr/bin/emacsclient")
+
+(provide 'linux-miscs)
