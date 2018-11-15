@@ -161,6 +161,7 @@
             (define-key ruby-mode-map (kbd "C-M-p") nil)
             (define-key ruby-mode-map (kbd "C-M-n") nil)
             (define-key ruby-mode-map (kbd "C-C C-e") 'ruby-insert-end)))
+(defun ruby-mode-set-encoding ())
 
 ;; twittering-mode
 (el-get 'sync '(twittering-mode))
@@ -168,8 +169,6 @@
       '(":home"))
 ;; アイコン表示
 (setq twittering-icon-mode nil)
-
-(defun ruby-mode-set-encoding ())
 
 ;; whitespace-mode
 
