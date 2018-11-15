@@ -162,6 +162,13 @@
             (define-key ruby-mode-map (kbd "C-M-n") nil)
             (define-key ruby-mode-map (kbd "C-C C-e") 'ruby-insert-end)))
 
+;; twittering-mode
+(el-get 'sync '(twittering-mode))
+(setq twittering-initial-timeline-spec-string
+      '(":home"))
+;; アイコン表示
+(setq twittering-icon-mode nil)
+
 (defun ruby-mode-set-encoding ())
 
 (provide 'modes)
