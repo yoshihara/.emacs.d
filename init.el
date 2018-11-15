@@ -23,7 +23,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(js-indent-level 2)
  '(package-selected-packages
    (quote
     (web-mode mozc helm magit popup open-junk-file js2-mode textile-mode rspec-mode yaml-mode coffee-mode slim-mode sass-mode scss-mode markdown-mode json-mode haml-mode git-commit dash async init-loader))))
