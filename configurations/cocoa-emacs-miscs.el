@@ -27,21 +27,5 @@
   (setenv "PATH" path-from-shell)
   (setq exec-path (split-string path-from-shell path-separator)))
 
-(let ((default-directory (expand-file-name "~/.emacs.d/")))
- (add-to-list 'load-path default-directory)
- (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
-     (normal-top-level-add-subdirs-to-load-path)))
-
-(setq max-lisp-eval-depth 100000000000)
-(setq popwin:close-popup-window-timer-interval 0.1)
-
-(require 'cl)
-(defun clear-close-popwin-window-timer ()
-  (interactive)
-  (setq timer-list (remove-if 'close-popwin-timer-p timer-list)))
-
-(defun close-popwin-timer-p (timer)
-  (string= "popwin:close-popup-window-timer" (symbol-name (aref timer 5))))
-
 ;; magitでコミットメッセージ入力時に新しいemacsを立ち上げないようにする
 (set-variable 'with-editor-emacsclient-executable "/usr/local/bin/emacsclient")
