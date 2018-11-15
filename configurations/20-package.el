@@ -3,7 +3,6 @@
 (defvar installing-package-list
   '(
     git-commit
-    popup
     magit
     helm
     anzu

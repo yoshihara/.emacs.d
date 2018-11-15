@@ -9,4 +9,7 @@
 ;; open-junk-file
 (ensure-installed-package 'open-junk-file)
 
+;; popup
+(ensure-installed-package 'popup)
+
 (provide 'misc-packages)
