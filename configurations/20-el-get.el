@@ -26,8 +26,3 @@
               (kbd "C-c C-c") 'grep-edit-finish-edit)))
 
 (el-get 'sync '(fuzzy))
-
-;;; Migemo
-;; ローマ字で日本語をインクリメンタルサーチする。
-;; インストールされていたら有効にする。
-(require 'migemo nil t)
