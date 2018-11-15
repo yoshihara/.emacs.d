@@ -1,4 +1,7 @@
 (require 'coffee-mode)
+
+(setq coffee-tab-width 2)
+
 (defun coffee-custom ()
   "coffee-mode-hook"
   (and (set (make-local-variable 'tab-width) 2)

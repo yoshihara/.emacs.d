@@ -6,5 +6,3 @@
       '(":home"))
 ;; アイコン表示
 (setq twittering-icon-mode nil)
-
-(setq coffee-tab-width 2)
