@@ -27,6 +27,7 @@
 
 (require 'commands)
 (require 'modes)
+(require 'misc-packages)
 
 (if (eq system-type 'darwin)
   (require 'cocoa-emacs-miscs) ; macosのとき

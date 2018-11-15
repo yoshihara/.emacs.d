@@ -2,7 +2,6 @@
 
 (defvar installing-package-list
   '(
-    async
     dash
     git-commit
     open-junk-file
