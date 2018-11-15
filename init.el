@@ -34,4 +34,4 @@
  '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (mozc helm magit popup open-junk-file js2-mode textile-mode rspec-mode yaml-mode coffee-mode slim-mode sass-mode scss-mode markdown-mode json-mode haml-mode git-commit dash async init-loader))))
+    (web-mode mozc helm magit popup open-junk-file js2-mode textile-mode rspec-mode yaml-mode coffee-mode slim-mode sass-mode scss-mode markdown-mode json-mode haml-mode git-commit dash async init-loader))))
