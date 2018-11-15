@@ -9,7 +9,7 @@
   (when (< emacs-major-version 24)
     (add-to-list 'package-archives (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
-
+(package-refresh-contents)
 
 ;; init-loader
 (require 'init-loader)
@@ -20,6 +20,7 @@
                  '("~/.emacs.d/config")
                  load-path))
 (require 'commands)
+(require 'modes)
 
 (if (eq system-type 'darwin)
   (require 'cocoa-emacs-miscs) ; macosのとき
