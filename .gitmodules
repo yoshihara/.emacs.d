@@ -10,9 +10,6 @@
 [submodule "imports/simplenote"]
 	path = imports/simplenote
 	url = https://github.com/cefstat/simplenote.el.git
-[submodule "imports/fcopy"]
-	path = imports/fcopy
-	url = https://github.com/ataka/fcopy.git
 [submodule "imports/rebuildfm"]
 	path = imports/rebuildfm
 	url = https://github.com/syohex/emacs-rebuildfm.git
