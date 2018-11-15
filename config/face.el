@@ -1,3 +1,5 @@
+;; faceの設定を入れる
+
 ;;; 現在の関数名をウィンドウ上部に表示する
 (which-function-mode 1)
 
@@ -76,3 +78,5 @@
 ;; ファイル名が重複していたらディレクトリ名を追加する。
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
+(provide 'face)

@@ -43,6 +43,7 @@
                  '("~/.emacs.d/config") ;; emacs設定用ファイル入れ
                  load-path))
 
+(require 'face)
 (require 'commands)
 (require 'modes)
 (require 'other-packages)
