@@ -1,4 +1,4 @@
-;;; キーバインド
+;; キーバインド
 (keyboard-translate ?\C-h ?\C-?)                       ; バックスペース
 (define-key global-map (kbd "M-?") 'help-for-help)     ; ヘルプ
 (define-key global-map (kbd "C-z") 'undo)              ; undo
@@ -27,3 +27,5 @@
 (setq require-final-newline t)
 ;; バッファの最後でnewlineで新規行を追加するのを禁止する
 (setq next-line-add-newlines nil)
+
+(provide 'keybinds)

@@ -44,6 +44,7 @@
                  load-path))
 
 (require 'face)
+(require 'keybinds)
 (require 'commands)
 (require 'builtin-packages)
 (require 'modes)
