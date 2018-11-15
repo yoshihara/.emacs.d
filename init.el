@@ -79,12 +79,14 @@
 
 (setq el-get-recipe-path (reverse el-get-recipe-path))
 
+;; emacsセットアップ用の設定
 (setq load-path (append
                  '("~/.emacs.d/setup") ;; emacsセットアップ用ファイル入れ（この後設定で読み込むファイルが依存するものはこっち）
                  load-path))
 
 (require 'functions)
 
+;; 基本的な部分やビルトインパッケージを使った設定
 (setq load-path (append
                  '("~/.emacs.d/config") ;; emacs設定用ファイル入れ
                  load-path))
@@ -101,6 +103,8 @@
 
 (require 'modes)
 (require 'other-packages)
+
+;; OSごとの設定
 
 (if (eq system-type 'darwin)
   (require 'cocoa-emacs-miscs) ; macosのとき
