@@ -1,3 +1,0 @@
-[submodule "imports/rebuildfm"]
-	path = imports/rebuildfm
-	url = https://github.com/syohex/emacs-rebuildfm.git
