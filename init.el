@@ -3,10 +3,6 @@
                  load-path))
 
 (setq load-path (append
-                 '("~/.emacs.d/submodules")
-                 load-path))
-
-(setq load-path (append
                  '("~/.emacs.d/imports")
                  load-path))
 
