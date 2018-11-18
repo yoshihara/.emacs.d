@@ -3,9 +3,6 @@
 ;; ¥の代わりにバックスラッシュを入力する
 (define-key global-map [?¥] [?\\])
 
-;; エラー音をならなくする
-(setq ring-bell-function 'ignore)
-
 (let* ((size 18)
        (asciifont "Ricty")
        (jpfont "Ricty")

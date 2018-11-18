@@ -48,6 +48,9 @@
 ;; c.f. https://github.com/technomancy/emacs-starter-kit/issues/39
 (setq ffap-machine-p-known 'reject)
 
+;; エラー音を鳴らなくする
+(setq ring-bell-function 'ignore)
+
 (setq-default indent-tabs-mode nil)
 (electric-indent-mode -1)
 
