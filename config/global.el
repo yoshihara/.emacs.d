@@ -43,7 +43,6 @@
 (when (eq window-system 'x)
   (setq x-select-enable-clipboard nil))
 
-
 ;; バッファ切り替えの時にカーソル下にピリオドを含む文字列があるとpingするのを抑制
 ;; c.f. https://github.com/technomancy/emacs-starter-kit/issues/39
 (setq ffap-machine-p-known 'reject)
