@@ -8,7 +8,7 @@
  '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (yaml-mode wgrep web-mode slim-mode scss-mode rspec-mode open-junk-file markdown-mode magit json-mode helm coffee-mode auto-complete anzu))))
+    (company yaml-mode wgrep web-mode slim-mode scss-mode rspec-mode open-junk-file markdown-mode magit json-mode helm coffee-mode anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
