@@ -24,11 +24,11 @@
 ;; gzファイルも編集できるようにする
 (auto-compression-mode t)
 
-;;; shebangがあるファイルを保存すると実行権をつける。
+;;; shebangがあるファイルを保存すると実行権をつける
 (add-hook 'after-save-hook
           'executable-make-buffer-file-executable-if-script-p)
 
-;;; リージョンの大文字小文字変換を有効にする。
+;;; リージョンの大文字小文字変換を有効にする
 ;; C-x C-u -> upcase
 ;; C-x C-l -> downcase
 (put 'upcase-region 'disabled nil)
