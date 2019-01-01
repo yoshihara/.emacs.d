@@ -88,34 +88,26 @@
 (ensure-installed-package 'wgrep)
 (require 'wgrep)
 
-;; company
-(ensure-installed-package 'company)
+;; auto-complete
+(ensure-installed-package 'auto-complete)
 
-(add-hook 'after-init-hook 'global-company-mode) ; すべてのモードで有効にする
-(setq company-transformers '(company-sort-by-backend-importance)) ; ソート順
-(setq company-idle-delay 0.05) ; n秒後に補完開始
-(setq company-minimum-prefix-length 2) ; n文字以上の単語の時に補完を開始
-(setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+(require 'auto-complete-config)
+(defvar ac-dictionary-directories  "~/.emacs.d/elisp/auto-complete/dict" )
+(ac-config-default)
+;; カスタマイズ
+(setq ac-auto-start 2)  ;; n文字以上の単語の時に補完を開始
+(setq ac-delay 0.05)  ;; n秒後に補完開始
+(setq ac-use-fuzzy t)  ;; 曖昧マッチ有効
+(setq ac-use-comphist t)  ;; 補完推測機能有効
+(setq ac-auto-show-menu 0.05)  ;; n秒後に補完メニューを表示
+(setq ac-quick-help-delay 0.5)  ;; n秒後にクイックヘルプを表示
+(setq ac-ignore-case nil)  ;; 大文字・小文字を区別する
 
-; 大文字小文字を区別しない
-(setq completion-ignore-case nil)
-(setq company-dabbrev-downcase nil)
-
-(global-set-key (kbd "C-M-i") 'company-complete)
-
-; C-n, C-pで補完候補を次/前の候補を選択
-(define-key company-active-map (kbd "C-n") 'company-select-next)
-(define-key company-active-map (kbd "C-p") 'company-select-previous)
-(define-key company-search-map (kbd "C-n") 'company-select-next)
-(define-key company-search-map (kbd "C-p") 'company-select-previous)
-
-(define-key company-active-map (kbd "C-s") 'company-filter-candidates) ; C-sで絞り込む
-
-; TABで候補を設定
-(define-key company-active-map (kbd "C-i") 'company-complete-selection)
-(define-key company-active-map [tab] 'company-complete-selection)
-
-(define-key company-active-map (kbd "C-f") 'company-complete-selection) ; C-fで候補を設定
-(define-key emacs-lisp-mode-map (kbd "C-M-i") 'company-complete) ; 各種メジャーモードでも C-M-iで company-modeの補完を使う
+;; auto-complete の候補に日本語を含む単語が含まれないようにする
+;; http://d.hatena.ne.jp/IMAKADO/20090813/1250130343
+(defadvice ac-word-candidates (after remove-word-contain-japanese activate)
+  (let ((contain-japanese (lambda (s) (string-match (rx (category japanese)) s))))
+    (setq ad-return-value
+          (remove-if contain-japanese ad-return-value))))
 
 (provide 'other-packages)
