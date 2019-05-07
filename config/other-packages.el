@@ -135,7 +135,7 @@
 (setq skk-henkan-show-candidates-rows 2) ; 候補表示件数を2列に
 
 ;; 動作
-(setq skk-egg-like-newline nil) ; Enterで改行しない
+(setq skk-egg-like-newline t) ; Enterで改行しない
 (setq skk-delete-implies-kakutei nil) ; ▼モードで一つ前の候補を表示
 (setq skk-use-look t)
 (setq skk-auto-insert-paren nil)
