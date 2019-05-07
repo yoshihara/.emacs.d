@@ -1,5 +1,5 @@
 ;; キーバインド
-(keyboard-translate ?\C-h ?\C-?)                       ; バックスペース
+(define-key global-map (kbd "C-h") 'backward-delete-char-untabify)     ; バックスペース
 (define-key global-map (kbd "M-?") 'help-for-help)     ; ヘルプ
 (define-key global-map (kbd "C-z") 'undo)              ; undo
 (define-key global-map (kbd "C-c C-i") 'hippie-expand) ; 補完
