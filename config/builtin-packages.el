@@ -120,4 +120,29 @@ Subexpression references can be used (\1, \2, etc)."
 (global-set-key (kbd "C-M-%") 're-builder-with-point)
 (define-key reb-mode-map (kbd "<return>") 'reb-query-replace-this-regxp)
 
+;; org-mode
+(setq org-directory "~/org")
+(setq org-default-notes-file "notes.org")
+
+; Org-captureの設定
+(define-key global-map "\C-cc" 'org-capture)
+; Org-captureのテンプレート（メニュー）の設定
+(setq org-capture-templates
+      '(("n" "Note" entry (file+headline "~/org/notes.org" "Notes")
+         "* %U %?")
+        ))
+
+; メモをC-M-^で見る
+; https://qiita.com/takaxp/items/0b717ad1d0488b74429d
+(defun show-org-buffer (file)
+  "Show an org-file FILE on the current buffer."
+  (interactive)
+  (if (get-buffer file)
+      (let ((buffer (get-buffer file)))
+        (switch-to-buffer buffer)
+        (message "%s" file))
+    (find-file (concat "~/org/" file))))
+(global-set-key (kbd "C-M-^") '(lambda () (interactive)
+                                 (show-org-buffer "notes.org")))
+
 (provide 'builtin-packages)
